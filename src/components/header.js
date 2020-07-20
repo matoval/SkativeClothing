@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 
 const Header = ({ siteTitle }) => (
   <header
@@ -84,11 +83,10 @@ const Header = ({ siteTitle }) => (
           to="/cart"
           style={{
             color: `var(--main-font)`,
-            textDecoration: `none`,
-            fontSize: `small`
+            textDecoration: `none`
           }}
         >
-          <ShoppingCartIcon />
+          CART
         </Link>
       </ul>
     </div>
