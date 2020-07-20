@@ -84,7 +84,8 @@ const Header = ({ siteTitle }) => (
           to="/cart"
           style={{
             color: `var(--main-font)`,
-            textDecoration: `none`
+            textDecoration: `none`,
+            fontSize: `small`
           }}
         >
           <ShoppingCartIcon />
