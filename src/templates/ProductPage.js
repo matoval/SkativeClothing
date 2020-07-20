@@ -7,6 +7,7 @@ export default function ProductPage({ data: { product } }) {
   const cleanDescription = product.description.replace(/(<([^>]+)>)/ig, '')
   return (
     <Layout>
+      <SEO title={product.name} />
       <div
         className="product-page"
       >

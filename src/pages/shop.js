@@ -26,6 +26,7 @@ const ShopPage = () => {
 
   return (
     <Layout>
+      <SEO title="Shop" />
         <React.Fragment>
         <ul
           style={{
