@@ -12,9 +12,10 @@ export default function ProductPage({ data: { product } }) {
         className="product-page"
       >
         <img
-          src={product.assets[0].url}
+          src={product.media.source}
           style={{
-            height: `500px`
+            height: `400px`,
+            borderRadius: `20px`
           }}
         />
         <h1>{product.name}</h1>
@@ -33,8 +34,8 @@ export const pageQuery = graphql`
       price {
         formatted_with_symbol
       }
-      assets {
-        url
+      media {
+        source
       }
       description
     }

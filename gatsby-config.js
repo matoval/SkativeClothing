@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `SkativeClothing.Com`,
@@ -32,7 +34,22 @@ module.exports = {
         options: {
           publicKey: 'pk_185339f64b5221d9e5c4384ec0594b3f4e9810da060f5'
         },
-      },    
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'checProduct',
+        name: 'allItemImages',
+        imagePath: 'nodes.media.source',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
