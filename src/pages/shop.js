@@ -9,8 +9,8 @@ const pageQuery = graphql`
     products: allChecProduct {
       nodes {
         name
-        assets {
-          url
+        media {
+          source
         }
         permalink
         price {
@@ -29,10 +29,7 @@ const ShopPage = () => {
       <SEO title="Shop" />
         <React.Fragment>
         <ul
-          style={{
-            display: `grid`,
-            paddingTop: `10px`
-          }}
+          className="shop"
         >
             {products.nodes.map(product => (
               <li
@@ -52,7 +49,7 @@ const ShopPage = () => {
                   }}
                 >
                   <img
-                    src={product.assets[0].url}
+                    src={product.media.source}
                     style={{
                       height: `200px`,
                       width: `auto`,

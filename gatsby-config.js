@@ -47,7 +47,7 @@ module.exports = {
       options: {
         nodeType: 'checProduct',
         name: 'allItemImages',
-        imagePath: 'nodes.media.source',
+        imagePath: 'nodes[].media.source',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
